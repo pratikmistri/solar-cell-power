@@ -3,17 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Hello World</title>
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-</style>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .wave span {
+      display: inline-block;
+      animation: wave 1s ease-in-out infinite;
+      animation-delay: calc(0.1s * var(--i));
+    }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
 </head>
-<body>
-  <h1>Hello world</h1>
-</body>
+  <body>
+    <h1 class="wave">
+      <span style="--i:1">H</span>
+      <span style="--i:2">e</span>
+      <span style="--i:3">l</span>
+      <span style="--i:4">l</span>
+      <span style="--i:5">o</span>
+      <span style="--i:6">&nbsp;</span>
+      <span style="--i:7">w</span>
+      <span style="--i:8">o</span>
+      <span style="--i:9">r</span>
+      <span style="--i:10">l</span>
+      <span style="--i:11">d</span>
+    </h1>
+  </body>
 </html>
