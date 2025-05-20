@@ -1,0 +1,36 @@
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #fff;
+}
+
+#dot-container {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 50%;
+  animation: wave 1.5s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  font-family: sans-serif;
+}
